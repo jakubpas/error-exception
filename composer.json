@@ -1,10 +1,10 @@
 {
-  "name": "jakubpas/gapi",
+  "name": "jakubpas/error-exception",
   "type": "library",
   "description": "GAPI is an updated version of Google Analytics PHP Interface",
   "keywords": [
-    "google analytics",
-    "GAPI"
+    "set_error_handler",
+    "PHP Exceptions"
   ],
   "homepage": "http://jakubpas.net",
   "license": "GPL",
@@ -20,7 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-      "JakubPas\\Gapi\\": "src/"
+      "JakubPas\\Exception\\": "src/"
     }
   }
 }
