@@ -3,12 +3,14 @@
 PHP 7 will allow to use of exceptions in the engine and will replace the existing fatal or recoverable fatal errors 
 with exceptions.
 Meanwhile in older PHP versions the E_USER_WARNING, E_USER_NOTICE, and any other non-terminating error codes, are useless 
-and act like E_USER_ERROR that will terminate when you combine a custom ERROR_HANDLER with ErrorException and do not CATCH 
-the error. There is NO way to return execution to the parent scope in the EXCEPTION_HANDLER.
+and act like E_USER_ERROR that will terminate runtime unless ERROR_HANDLER is not combined with ErrorException to catch 
+the error. This library introduces sets of exceptions which handle most of the errors like: CompileError, 
+CompileWarning, CoreError, CoreWarning, Deprecated, Handler.php, Notice, Parse, RecoverableError, Strict, UserDeprecated, 
+UserError, UserNotice, UserWarning, Warning etc.
 
 ## Code Example
 
-To turn on ErrorEcxeptions handling use:
+To turn on ErrorExceptions handling use:
 ```
 <?php
 use JakubPas\Exception\Handler;
@@ -18,7 +20,7 @@ Handler::set();
 
 ## Motivation
 
-The idea of this package is to add composer auto-loader functionality to GAPI code and make it PHP>5.4 compatible. There also some minor bug fixes since the original version.
+The idea of this package is to replace most of the terminating runtime errors with the recoverable exceptions.
 
 ## Installation
 
@@ -26,16 +28,20 @@ composer require jakubpas/error-exception
 
 ## API Reference
 
-The API Reference are yet to be added.
+The API Reference is yet to be added.
 
 ## Tests
 
-The test are yet to be added.
+To run the tests:
+```
+cd test
+../vendor/bin/phpunit 
+
+```
 
 ## Contributors
 
 Jakub Pas <jakubpas@gmail.com> 2015
-Stig Manning <stig@sdm.co.nz> 2009
 
 ## License
 

@@ -14,7 +14,6 @@ class Handler
         ini_set("display_errors", true);
     }
 
-
     public static function set()
     {
         set_error_handler(
@@ -97,13 +96,13 @@ class Handler
      * @todo Fix this to get full stack trace
      */
     public static function getExceptionTraceAsString(\Exception $exception) {
-        $rtn = "";
+        $ret = "";
         $count = 0;
-        foreach ($exception->getTrace() as $frame) {
+        foreach ($exception->getTrace() as $trace) {
             $args = "";
-            if (isset($frame['args'])) {
+            if (isset($trace['args'])) {
                 $args = array();
-                foreach ($frame['args'] as $arg) {
+                foreach ($trace['args'] as $arg) {
                     if (is_string($arg)) {
                         $args[] = "'" . $arg . "'";
                     } elseif (is_array($arg)) {
@@ -122,14 +121,14 @@ class Handler
                 }
                 $args = join(", ", $args);
             }
-            $rtn .= sprintf( "#%s %s(%s): %s(%s)\n",
+            $ret .= sprintf( "#%s %s(%s): %s(%s)\n",
                 $count,
-                isset($frame['file']) ? $frame['file'] : 'unknown file',
-                isset($frame['line']) ? $frame['line'] : 'unknown line',
-                (isset($frame['class']))  ? $frame['class'].$frame['type'].$frame['function'] : $frame['function'],
+                isset($trace['file']) ? $trace['file'] : 'unknown file',
+                isset($trace['line']) ? $trace['line'] : 'unknown line',
+                (isset($trace['class']))  ? $trace['class'].$trace['type'].$trace['function'] : $trace['function'],
                 $args );
             $count++;
         }
-        return $rtn;
+        return $ret;
     }
 } 
