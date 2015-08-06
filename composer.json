@@ -1,0 +1,26 @@
+{
+  "name": "jakubpas/gapi",
+  "type": "library",
+  "description": "GAPI is an updated version of Google Analytics PHP Interface",
+  "keywords": [
+    "google analytics",
+    "GAPI"
+  ],
+  "homepage": "http://jakubpas.net",
+  "license": "GPL",
+  "authors": [
+    {
+      "name": "Jakub Pas",
+      "email": "jakubpas@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "JakubPas\\Gapi\\": "src/"
+    }
+  }
+}

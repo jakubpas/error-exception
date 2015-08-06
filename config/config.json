@@ -1,0 +1,41 @@
+{
+    "sites": {
+        "Rss": {
+            "MISNA": {"url": "http:\/\/www.misna.org\/feed"},
+            "IPS": {"url": "http:\/\/www.ipsnews.net\/feed"},
+            "enabled": true
+        },
+        "NYT": {
+            "url": "http:\/\/www.nytimes.com\/pages\/aponline\/news\/index.html",
+            "enabled": true
+        },
+        "AskNews": {
+            "url": "http:\/\/notizie.tmnews.it\/tweb\/",
+            "login": "internazionale5",
+            "password": "notasca5",
+            "date": "",
+            "enabled": false
+        },
+        "Routers": {
+            "url": "https:\/\/go.mediaexpress.reuters.com\/",
+            "login": "j.zanchini@internazionale.it",
+            "password": "Internazionale2014",
+            "date": "",
+            "parse_past": "now",
+            "enabled": true
+        },
+        "AFP": {
+            "url": "http:\/\/www.afp-direct.com\/",
+            "login": "INTERNAZIONAL",
+            "password": "j9g3x73",
+            "date": "",
+            "parse_past": "now",
+            "enabled": true
+        }
+    },
+    "connection": {"host": "localhost", "database": "rssnews", "user": "root", "password": "root"},
+    "testMode": false,
+    "verboseOutput": true,
+    "debugEmail": "internazionale-rss-parser@gag.it",
+    "debugEmailFrom": "internazionale-parser@gag.it"
+}
