@@ -1,7 +1,7 @@
 {
   "name": "jakubpas/error-exception",
   "type": "library",
-  "description": "GAPI is an updated version of Google Analytics PHP Interface",
+  "description": "The idea of this package is to replace most of the terminating runtime errors with the recoverable exceptions.",
   "keywords": [
     "set_error_handler",
     "PHP Exceptions"
