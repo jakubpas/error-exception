@@ -1,10 +1,16 @@
 <?php
 
+use JakubPas\Exception\Handler;
+
 /**
  * Class HandlerTest
  * @author Jakub Pas
  */
-class HandlerTest {
+class HandlerTest extends PHPUnit_Framework_TestCase
+{
+    public function setUp() {
+        Handler::set();
+    }
 
     /**
      * @expectedException JakubPas\Exception\NoticeException
