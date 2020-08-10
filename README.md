@@ -41,7 +41,7 @@ cd test
 
 ## Contributors
 
-Jakub Pas <jakubpas@gmail.com> 2015
+Jakub Pas 2015
 
 ## License
 
